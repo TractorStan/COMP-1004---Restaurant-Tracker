@@ -20,7 +20,7 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"></script>
     <script src="js/spa.js"></script>
-    
+
     <!--Below is from SPA4-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-
@@ -66,10 +66,10 @@ XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V
         <!-- Sidebar -->
         <nav class="navbar navbar-dark bg-dark">
             <ul class="navbar-nav flex-column">
-                <li class="nav-item"><a class="nav-link active" href="Index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="Book.html">Book A Table</a></li>
-                <li class="nav-item"><a class="nav-link" href="Amend.html">Amend a Booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="ScanQR.html">Scan QR</a>
+                <li class="nav-item"><a class="nav-link active" href="#" id="index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"id="book">Book A Table</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="amend">Amend a Booking</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="scan">Scan QR</a>
             </ul>
         </nav>
         <!-- /#sidebar -->
@@ -95,7 +95,7 @@ XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V
     <style>
 
         .footer {
-            position: absolute;
+            position: fixed; /*Keeps footer at the bottom at all times, even when scrolling*/
             bottom: 0;
             width: 100%;
             /* Set the fixed height of the footer here */

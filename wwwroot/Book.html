@@ -1,148 +1,105 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) (From SPA1-2 -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"></script>
-    <script src="js/spa.js"></script>
-
-    <!--Below is from SPA3-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"></script>
-    <script src="js/spa.js"></script>
-
-    <!--Below is from SPA4-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-          integrity="sha512-
-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-          crossorigin="anonymous" />
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-            integrity="sha512-
-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-            crossorigin="anonymous"></script>
-    <style>
-        #mapid {
-            height: 180px;
-        }
-    </style>
-
-    <title>WhetherForks - Scan QR</title>
-    <title></title>
-</head>
-<body>
-    <!-- Static navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="WhetherForks">WhetherForks</a>
-            </div>
-            <div id="navbarTogglerDemo01" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="https://www.gov.uk/guidance/national-lockdown-stay-at-home" id="index">Consult your areas lockdown regulations before booking</a></li>
-                </ul>
-
-            </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-    </nav>
-
-    <div class="container row">
-        <!-- Sidebar -->
-        <nav class="navbar navbar-dark bg-dark">
-            <ul class="navbar-nav flex-column">
-                <li class="nav-item"><a class="nav-link" href="Index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="Book.html">Book A Table</a></li>
-                <li class="nav-item"><a class="nav-link" href="Amend.html">Amend a Booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="ScanQR.html">Scan QR</a>
-            </ul>
-        </nav>
-        <!-- /#sidebar -->
-
-        <!-- Page Content -->
+﻿        <!-- Page Content -->
         <div id="page-content-wrapper" class="col-10 pl-0">
             <div class="jumbotron bg-cover" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(/img/Boris.jpg)">
                 <div class="container">
 
                     <h1 class="display-4" style="font-family:verdana">
-                        This is where you will scan your QR Code!
+                        This is where you will Book a table for you and your friends!
                     </h1>
 
                     <p class="lead font-weight-bold">
-                        Hello World
+                        Answer the form below to see if you're elligible!
                     </p>
 
                     <div>
 
-                        <h2>HTML Forms</h2>
+                        <form>
+                            <!-- the old form had action="/action_page.php"-->
+                            <p> How many people are coming with you? </p>
 
-                        <form action="/action_page.php">
                             <div>
-                                <p> How many people are coming with you? </p>
-                                <input type="radio" id="One" name="drone" value="One"
-                                       checked>
+
+                                <input type="radio" id="Just_Me" name="people" value="Just_Me"> <!--"Checked" means that this particular box is already ticked, making it convinent for single restaurant-goers.-->
+                                <label for="Just_Me">Just Me</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="One" name="people" value="One">
                                 <label for="One">One</label>
                             </div>
 
                             <div>
-                                <input type="radio" id="Two" name="drone" value="Two">
+                                <input type="radio" id="Two" name="people" value="Two">
                                 <label for="Two">Two</label>
                             </div>
 
                             <div>
-                                <input type="radio" id="Three" name="drone" value="Three">
+                                <input type="radio" id="Three" name="people" value="Three">
                                 <label for="Three">Three</label>
                             </div>
-                            <input type="submit" value="Submit">
-                        </form>
 
-                        <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+                            <div>
+                                <input type="radio" id="Four" name="people" value="Four">
+                                <label for="Four">Four</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="Five" name="people" value="Five">
+                                <label for="Five">Five</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="Six" name="people" value="Six">
+                                <label for="Six">Six or more</label>
+                            </div>
+
+                            <button type="button" onclick="display()">
+                                Submit
+                            </button>
+
+                        </form>
+                        <div id="regular" style="color:black; font-size:18px; font-weight:bold;"></div>
+                        <div id="nonono" style="color:red; font-size:18px; font-weight:bold"></div>
+
+                        <script>
+                            function display() {
+                                if (document.getElementById('Just_Me').checked) {
+                                    document.getElementById("regular").innerHTML
+                                        =  "Just Yourself? Loser.";
+                                }
+                                else if (document.getElementById('One').checked) {
+                                    document.getElementById("regular").innerHTML
+                                        = "You and " + document.getElementById("One").value + " other people?" + " Okay have fun!";
+                                }
+                                else if (document.getElementById('Two').checked) {
+                                    document.getElementById("regular").innerHTML
+                                        = "You and " + document.getElementById("Two").value + " other people?" + "Okay have fun!";
+                                }
+                                else if (document.getElementById('Three').checked) {
+                                    document.getElementById("regular").innerHTML
+                                        = "You and " + document.getElementById("Three").value + " other people?" + " Okay have fun!";
+                                }
+                                else if (document.getElementById('Four').checked) {
+                                    document.getElementById("regular").innerHTML
+                                        = "You and " + document.getElementById("Four").value + " other people?" + " Okay have fun!";
+                                }
+                                else if (document.getElementById('Five').checked) {
+                                    document.getElementById("regular").innerHTML
+                                        = "You and " + document.getElementById("Five").value + " other people?" + " Okay have fun!";
+                                }
+                                else if (document.getElementById('Six').checked) {
+                                    document.getElementById("nonono").innerHTML
+                                        = "You and " + document.getElementById("Six").value + " other people?! No, that is not allowed.";
+                                }
+                                else {
+                                    document.getElementById("disp").innerHTML
+                                        = "No one selected";
+                                }
+                            }
+                        </script>
 
                     </div>
 
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Page Content -->
-
-    <style>
-
-        .footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            /* Set the fixed height of the footer here */
-            height: 60px;
-            line-height: 60px; /* Vertically center the text there */
-            background-color: #f5f5f5;
-        }
-    </style>
-    <footer class="footer">
-        <div class="container">
-            <span class="text-muted">© 2021 JR WhetherForks. Company registered in England: 6942021  </span>
-            <span class="active"><a id="index">/</a></span> <!--just a / that seperates that links-->
-            <span class="active"><a href="https://www.jdwetherspoon.com/terms-and-conditions" id="index">Terms & Conditions</a></span>
-            <span class="active"><a id="index">/</a></span> <!--just a / that seperates that links-->
-            <span class="active"><a href="https://www.jdwetherspoon.com/privacy-policy" id="index">Privacy Policy</a></span>
-            <span class="active"><a id="index">/</a></span> <!--just a / that seperates that links-->
-            <span class="active"><a href="https://www.jdwetherspoon.com/~/media/files/pdf-documents/legal/slavery-and-human-trafficking-statement-2019.pdf" id="index">Modern Slavery Statement</a></span>
-            <span class="active"><a id="index">/</a></span> <!--just a / that seperates that links-->
-            <span class="active"><a href="https://www.jdwetherspoon.com/Site-Map" id="index">Sitemap</a></span>
-        </div>
-    </footer>
-
-</body>
-</html>
