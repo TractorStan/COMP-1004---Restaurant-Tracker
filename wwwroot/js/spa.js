@@ -10,7 +10,7 @@
     $('#amend').click(function () {
         $('#page-content-wrapper').load('Amend.html');
     })
-});$(document).ready(function () {
+});$(document).ready(function () {
     $('#scan').click(function () {
         $('#page-content-wrapper').load('ScanQR.html');
     })
