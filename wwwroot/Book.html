@@ -1,105 +1,117 @@
-﻿        <!-- Page Content -->
-        <div id="page-content-wrapper" class="col-10 pl-0">
-            <div class="jumbotron bg-cover" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(/img/Boris.jpg)">
-                <div class="container">
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="col-10 pl-0">
+        <div class="jumbotron bg-cover" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(/img/Boris.jpg)">
+            <div class="container">
 
-                    <h1 class="display-4" style="font-family:verdana">
-                        This is where you will Book a table for you and your friends!.
-                    </h1>
+                <h1 class="display-4" style="font-family:verdana">
+                    This is where you will Book a table for you and your friends!.
+                </h1>
 
-                    <p class="lead font-weight-bold">
-                        Answer the form below to see if you're elligible!
-                    </p>
+                <p class="lead font-weight-bold">
+                    Answer the form below to see if you're elligible!
+                </p>
 
-                    <div>
+                <div>
 
-                        <form>
-                            <!-- the old form had action="/action_page.php"-->
-                            <p> How many people are coming with you? </p>
+                    <form>
+                        <!-- the old form had action="/action_page.php"-->
+                        <p> How many people are coming with you? </p>
 
-                            <div>
+                        <div>
 
-                                <input type="radio" id="Just_Me" name="people" value="Just_Me"> <!--"Checked" means that this particular box is already ticked, making it convinent for single restaurant-goers.-->
-                                <label for="Just_Me">Just Me</label>
-                            </div>
+                            <input type="radio" id="Just_Me" name="people" value="Just_Me"> <!--"Checked" means that this particular box is already ticked, making it convinent for single restaurant-goers.-->
+                            <label for="Just_Me">Just Me</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" id="One" name="people" value="One">
-                                <label for="One">One</label>
-                            </div>
+                        <div>
+                            <input type="radio" id="One" name="people" value="One">
+                            <label for="One">One</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" id="Two" name="people" value="Two">
-                                <label for="Two">Two</label>
-                            </div>
+                        <div>
+                            <input type="radio" id="Two" name="people" value="Two">
+                            <label for="Two">Two</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" id="Three" name="people" value="Three">
-                                <label for="Three">Three</label>
-                            </div>
+                        <div>
+                            <input type="radio" id="Three" name="people" value="Three">
+                            <label for="Three">Three</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" id="Four" name="people" value="Four">
-                                <label for="Four">Four</label>
-                            </div>
+                        <div>
+                            <input type="radio" id="Four" name="people" value="Four">
+                            <label for="Four">Four</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" id="Five" name="people" value="Five">
-                                <label for="Five">Five</label>
-                            </div>
+                        <div>
+                            <input type="radio" id="Five" name="people" value="Five">
+                            <label for="Five">Five</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" id="Six" name="people" value="Six">
-                                <label for="Six">Six or more</label>
-                            </div>
+                        <div>
+                            <input type="radio" id="Six" name="people" value="Six">
+                            <label for="Six">Six or more</label>
+                        </div>
 
-                            <button type="button" onclick="display()">
-                                Submit
-                            </button>
+                        <button type="button" onclick="display()">
+                            Submit
+                        </button>
 
-                        </form>
-                        <div id="regular" style="color:black; font-size:18px; font-weight:bold;"></div>
-                        <div id="nonono" style="color:red; font-size:18px; font-weight:bold"></div>
+                    </form>
+                    <div id="regular" style="color:black; font-size:18px; font-weight:bold;"></div>
+                    <div id="nonono" style="color:red; font-size:18px; font-weight:bold"></div>
 
-                        <script>
-                            function display() {
-                                if (document.getElementById('Just_Me').checked) {
-                                    document.getElementById("regular").innerHTML
-                                        =  "Just Yourself? Loser.";
-                                }
-                                else if (document.getElementById('One').checked) {
-                                    document.getElementById("regular").innerHTML
-                                        = "You and " + document.getElementById("One").value + " other people?" + " Okay have fun!";
-                                }
-                                else if (document.getElementById('Two').checked) {
-                                    document.getElementById("regular").innerHTML
-                                        = "You and " + document.getElementById("Two").value + " other people?" + "Okay have fun!";
-                                }
-                                else if (document.getElementById('Three').checked) {
-                                    document.getElementById("regular").innerHTML
-                                        = "You and " + document.getElementById("Three").value + " other people?" + " Okay have fun!";
-                                }
-                                else if (document.getElementById('Four').checked) {
-                                    document.getElementById("regular").innerHTML
-                                        = "You and " + document.getElementById("Four").value + " other people?" + " Okay have fun!";
-                                }
-                                else if (document.getElementById('Five').checked) {
-                                    document.getElementById("regular").innerHTML
-                                        = "You and " + document.getElementById("Five").value + " other people?" + " Okay have fun!";
-                                }
-                                else if (document.getElementById('Six').checked) {
-                                    document.getElementById("nonono").innerHTML
-                                        = "You and " + document.getElementById("Six").value + " other people?! No, that is not allowed.";
-                                }
-                                else {
-                                    document.getElementById("disp").innerHTML
-                                        = "No one selected";
-                                }
+                    <script>
+                        function display() {
+                            if (document.getElementById('Just_Me').checked) {
+                                document.getElementById("regular").innerHTML
+                                    = "Just Yourself? Loser.";
                             }
-                        </script>
-
-                    </div>
+                            else if (document.getElementById('One').checked) {
+                                document.getElementById("regular").innerHTML
+                                    = "You and " + document.getElementById("One").value + " other people?" + " Okay have fun!";
+                            }
+                            else if (document.getElementById('Two').checked) {
+                                document.getElementById("regular").innerHTML
+                                    = "You and " + document.getElementById("Two").value + " other people?" + "Okay have fun!";
+                            }
+                            else if (document.getElementById('Three').checked) {
+                                document.getElementById("regular").innerHTML
+                                    = "You and " + document.getElementById("Three").value + " other people?" + " Okay have fun!";
+                            }
+                            else if (document.getElementById('Four').checked) {
+                                document.getElementById("regular").innerHTML
+                                    = "You and " + document.getElementById("Four").value + " other people?" + " Okay have fun!";
+                            }
+                            else if (document.getElementById('Five').checked) {
+                                document.getElementById("regular").innerHTML
+                                    = "You and " + document.getElementById("Five").value + " other people?" + " Okay have fun!";
+                            }
+                            else if (document.getElementById('Six').checked) {
+                                document.getElementById("nonono").innerHTML
+                                    = "You and " + document.getElementById("Six").value + " other people?! No, that is not allowed.";
+                            }
+                            else {
+                                document.getElementById("disp").innerHTML
+                                    = "No one selected";
+                            }
+                        }
+                    </script>
 
                 </div>
+
             </div>
         </div>
+    </div>
+
+
+</body>
+</html>
